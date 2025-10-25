@@ -760,8 +760,7 @@ curl -X POST http://localhost:8080/api/v1/posts \
 
 **현재는 User Service와 Post Service만 MSA로 전환되었지만, 점진적으로 다른 서비스들도 전환할 예정입니다.**
 
-
-
+---
 
 ## 🚀 배포 및 테스트
 
