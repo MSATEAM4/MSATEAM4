@@ -798,11 +798,20 @@ curl -X POST http://localhost:8080/api/v1/posts \
     ```bash
     cd ~/studify-be
     ```
-3.  8개의 모든 컨테이너가 `Up` (실행 중) 상태인지 확인합니다.
+3.  Docker Hub에서 최신 이미지(수정본) 다운로드 합니다.
     ```bash
-    docker compose ps
+    sudo docker compose pull
     ```
-4.  Eureka 서버에 모든 서비스가 정상 등록되었는지 확인합니다.
+4. 모든 컨테이너를 시작(실행)시킵니다.
+   ```bash
+   sudo docker compose up -d
+   ```
+   
+5.  8개의 모든 컨테이너가 `Up` (실행 중) 상태인지 확인합니다.
+    ```bash
+    sudo docker compose ps
+    ```
+6.  Eureka 서버에 모든 서비스가 정상 등록되었는지 확인합니다.
     ```bash
     curl -s http://localhost:8761/eureka/apps | grep '<name>'
     ```
