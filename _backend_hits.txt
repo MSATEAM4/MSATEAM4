@@ -1,0 +1,17 @@
+== [BACK] URL/포트 하드코딩 및 호출 패턴 점검 ==
+studify-msa/user-service/src/main/resources/application.yml:24:      defaultZone: http://eureka-server:8761/eureka/
+studify-msa/user-service/build/resources/main/application.yml:24:      defaultZone: http://eureka-server:8761/eureka/
+studify-msa/post-service/src/main/resources/application.yml:24:      defaultZone: http://eureka-server:8761/eureka/
+studify-msa/post-service/build/resources/main/application.yml:24:      defaultZone: http://eureka-server:8761/eureka/
+studify-msa/api-gateway/src/main/resources/application.yml:19:              - "https://msa-red.vercel.app"
+studify-msa/api-gateway/src/main/resources/application.yml:56:      defaultZone: http://eureka-server:8761/eureka/
+studify-msa/api-gateway/src/main/java/com/lgcns/studify/gateway/config/CorsConfig.java:18:        corsConfig.setAllowedOrigins(List.of("http://localhost:3000",
+studify-msa/api-gateway/src/main/java/com/lgcns/studify/gateway/config/CorsConfig.java:19:                                            "https://msa-red.vercel.app"
+studify-msa/api-gateway/build/resources/main/application.yml:16:            allowedOrigins: "https://msa-red.vercel.app"
+studify-msa/api-gateway/build/resources/main/application.yml:56:      defaultZone: http://eureka-server:8761/eureka/
+studify-msa/notification-service/src/main/resources/application.yml:8:    url: jdbc:mariadb://localhost:3306/studify_notifications
+studify-msa/notification-service/src/main/resources/application.yml:21:      defaultZone: http://eureka-server:8761/eureka/
+studify-msa/notification-service/build/resources/main/application.yml:8:    url: jdbc:mariadb://localhost:3306/studify_notifications
+studify-msa/notification-service/build/resources/main/application.yml:21:      defaultZone: http://eureka-server:8761/eureka/
+
+== [BACK] Feign/RestTemplate/WebClient 직접 URL 사용 흔적 ==

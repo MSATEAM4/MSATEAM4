@@ -1,0 +1,15 @@
+== [FRONT] axios를 직접 import 한 곳 (공용 인스턴스 우회) ==
+src/api/post.js:1:import axios from "./axios";
+src/api/axios.js:2:import axios from "axios";
+
+== [FRONT] 전체 URL(http/https, localhost) 하드코딩 ==
+src/setupTests.js:4:// learn more: https://github.com/testing-library/jest-dom
+src/components/Navbar.jsx:84:      const wsUrl = process.env.REACT_APP_WS_URL || 'http://localhost:8088/ws';
+
+== [FRONT] axios로 전체 URL 호출한 곳 ==
+
+== [FRONT] fetch로 전체 URL 호출한 곳 ==
+
+== [FRONT] 잘못된 상대경로 ("/api/"로 시작하지 않음) - axios ==
+
+== [FRONT] 잘못된 상대경로 ("/api/"로 시작하지 않음) - fetch ==
